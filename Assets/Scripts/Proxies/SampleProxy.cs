@@ -15,11 +15,13 @@ using PureMVC.Patterns;
 /// string ProxyName [get]
 /// object Data[get,set]
 /// </summary>
-public class SampleProxy : Proxy,IFWProxy
+public class SampleProxy : Proxy
 {
 
 	public static string NAME="sampleProxy";
-	private SampleModel sm=new SampleModel(0,"name");
+    public static string SMAPLE_NOTIFICATION = "sn";
+
+    private SampleModel sm=new SampleModel(0,"name");
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="SampleProxy"/> class.
@@ -57,7 +59,7 @@ public class SampleProxy : Proxy,IFWProxy
 	public void CallFunc()
 	{
 		Debug.Log ("SampleProxy Callfunc");
-		SendNotification (Notification.SMAPLE_NOTIFICATION,1);
+		SendNotification (SMAPLE_NOTIFICATION,1);
 	}
 }
 

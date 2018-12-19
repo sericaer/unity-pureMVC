@@ -6,7 +6,7 @@ using System.Collections.Generic;
 /// <summary>
 /// Sample mediators.
 /// </summary>
-public class SampleMediator :  Mediator, IFWMediator{
+public class SampleMediator :  Mediator{
 
 	//member data
 	//m_mediatorName
@@ -34,7 +34,7 @@ public class SampleMediator :  Mediator, IFWMediator{
 
 	private void init()
 	{
-		notificationList.Add(Notification.SMAPLE_NOTIFICATION);
+		notificationList.Add(SampleProxy.SMAPLE_NOTIFICATION);
 	}
 
 	public override void HandleNotification(INotification notification)
