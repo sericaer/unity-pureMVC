@@ -3,8 +3,9 @@ using System.Collections;
 using UnityEngine.UI;
 using PureMVC.Interfaces;
 using System;
+using PureMVC.Patterns.Facade;
 
-public class UnityFacade : PureMVC.Patterns.Facade
+public class UnityFacade : Facade
 {
 
 	public const string STARTUP = "UnityFacade.StartUp";
@@ -24,7 +25,7 @@ public class UnityFacade : PureMVC.Patterns.Facade
 	protected override void InitializeController ()
 	{
 		base.InitializeController ();
-		RegisterCommand (STARTUP, typeof(StartUpCommand));
+		RegisterCommand (STARTUP, ()=> { return new StartUpCommand(); });
 	}
 
 	public void StartUp ()
