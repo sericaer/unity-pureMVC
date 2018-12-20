@@ -2,8 +2,9 @@
 using System.Collections;
 using UnityEngine.UI;
 using PureMVC.Interfaces;
+using PureMVC.Patterns.Command;
 
-public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
+public class StartUpCommand : SimpleCommand {
 
 	public override void Execute(PureMVC.Interfaces.INotification notification)
 	{

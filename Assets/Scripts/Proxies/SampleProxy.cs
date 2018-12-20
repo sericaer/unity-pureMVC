@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using PureMVC.Interfaces;
-using PureMVC.Patterns;
+using PureMVC.Patterns.Proxy;
 
 /// <summary>
 /// Sample proxy is a pureMVC proxy sample.
@@ -27,9 +27,9 @@ public class SampleProxy : Proxy
 	/// Initializes a new instance of the <see cref="SampleProxy"/> class.
 	/// </summary>
 	/// <param name="proxyName">Proxy name.</param>
-	public SampleProxy () 
-	{
-	}
+	//public SampleProxy () 
+	//{
+	//}
 	public SampleProxy(string proxyName):base(proxyName)
 	{
 		

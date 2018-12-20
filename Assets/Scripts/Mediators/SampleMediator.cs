@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using PureMVC.Patterns;
+using PureMVC.Patterns.Mediator;
 using PureMVC.Interfaces;
 using PureMVC.Core;
 using System.Collections.Generic;
@@ -44,11 +44,11 @@ public class SampleMediator :  Mediator{
         Demo.Update((Notification)notification.Body);
 	}
 
-	public override  IList<string>ListNotificationInterests()
+	public override string[] ListNotificationInterests()
 	{
-        IList<string> notificationList = new List<string>();
+        List<string> notificationList = new List<string>();
         notificationList.Add(typeof(Notification).Name);
-		return notificationList;
+        return notificationList.ToArray();
 	}
 
 	public override void OnRegister()
