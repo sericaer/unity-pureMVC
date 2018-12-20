@@ -59,7 +59,12 @@ public class SampleProxy : Proxy
 	public void CallFunc()
 	{
 		Debug.Log ("SampleProxy Callfunc");
-		SendNotification (SMAPLE_NOTIFICATION,1);
+        SendNotification (new Notification{name=sm.Name});
 	}
+
+    public void SendNotification(Notification notification)
+    {
+        SendNotification(notification.GetType().Name, notification);
+    }
 }
 

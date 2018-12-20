@@ -10,7 +10,7 @@ public class StartUpCommand : PureMVC.Patterns.SimpleCommand {
 		Debug.Log("Execute StartUpCommand");
 		//RegisterProxy used for registering default proxies
 		Facade.RegisterProxy( new SampleProxy(SampleProxy.NAME ) );
-		Facade.RegisterMediator (new SampleMediator(SampleMediator.NAME));
+		Facade.RegisterMediator (new SampleMediator());
 		//Facade.RegisterProxy( new Count2Proxy( Count2Proxy.NAME ) );
 
 		SampleProxy proxy=Facade.RetrieveProxy (SampleProxy.NAME) as SampleProxy;
